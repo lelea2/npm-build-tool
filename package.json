@@ -1,0 +1,30 @@
+{
+  "name": "npm-build-tool",
+  "version": "1.0.0",
+  "description": "Using npm script as build tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec/ --require babel-register",
+    "start": "node index.js",
+    "build-css": "node-sass --include-path scss scss/main.scss build/css/style.min.css",
+    "build-js": "browserify js/**.js > build/js/main.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lelea2/npm-build-tool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lelea2/npm-build-tool/issues"
+  },
+  "homepage": "https://github.com/lelea2/npm-build-tool#readme",
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
